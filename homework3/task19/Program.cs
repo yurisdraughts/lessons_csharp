@@ -19,7 +19,7 @@ void PalindromeNumber(int number)
 {
     string num = Convert.ToString(number);
 
-    if (number < 10000 || number > 99999) Console.WriteLine($"Число не является пятизначным!");
+    if (number < 10000 || number > 99999) Console.WriteLine($"{number} -> число не является пятизначным!");
     else
     {
         if (IsPalindrome(num)) Console.WriteLine($"{number} -> да, число является палиндромом.");
