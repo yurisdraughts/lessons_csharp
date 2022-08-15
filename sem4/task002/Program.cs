@@ -18,15 +18,23 @@ int Digitsv2 (int number)
     return result;
 }
 
+string Decline(int number)
+{
+    if ((number >= 11 && number <= 19) || number % 10 >= 5) return "цифр";
+    else if (number % 10 >= 2 && number % 10 <= 4) return "цифры";
+    else return "цифру";
+}
+
 void PrintDigits(int number)
 {
-    Console.WriteLine($"Число {number} содержит {Digits(number)} цифр.");
+    Console.WriteLine($"Число {number} содержит {Digits(number)} {Decline(Digits(number))}.");
 }
 
 void PrintDigitsv2(int number)
 {
-    Console.WriteLine($"Число {number} содержит {Digitsv2(number)} цифр.");
+    Console.WriteLine($"Число {number} содержит {Digitsv2(number)} {Decline(Digitsv2(number))}.");
 }
 
+PrintDigits(7);
 PrintDigits(456);
 PrintDigitsv2(89126);
