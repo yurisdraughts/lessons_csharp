@@ -15,3 +15,4 @@ void PrintFactorial(int number)
 
 PrintFactorial(4);
 PrintFactorial(5);
+PrintFactorial(0);
