@@ -1,6 +1,6 @@
-﻿int[] RandomBinaryArray()
+﻿int[] RandomBinaryArray(int number)
 {
-    int[] array = new int[8];
+    int[] array = new int[number];
     for(int i = 0; i < array.Length; i++)
     {
         array[i] = new Random().Next(0, 2);
@@ -8,9 +8,9 @@
     return array;
 }
 
-void PrintArray()
+void PrintArray(int number)
 {
-    int[] array = RandomBinaryArray();
+    int[] array = RandomBinaryArray(number);
     Console.Write("[");
     for(int i = 0; i < array.Length; i++)
     {
@@ -20,6 +20,6 @@ void PrintArray()
     Console.WriteLine("]");
 }
 
-PrintArray();
-PrintArray();
-PrintArray();
+PrintArray(8);
+PrintArray(8);
+PrintArray(8);
