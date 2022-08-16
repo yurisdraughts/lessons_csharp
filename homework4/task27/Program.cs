@@ -19,3 +19,4 @@ void PrintDigitSum(int number)
 PrintDigitSum(452);
 PrintDigitSum(82);
 PrintDigitSum(9012);
+PrintDigitSum(0);
