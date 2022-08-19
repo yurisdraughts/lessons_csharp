@@ -38,7 +38,6 @@ int CountEvens(int[] array)
 //зададим метод, выводящий на консоль введённый массив и число чётных чисел в нём
 void PrintResult(int[] array)
 {
-    int count = CountEvens(array);
     Console.WriteLine($"{StringifyArray(array)} -> {CountEvens(array)}.");
 }
 
