@@ -11,18 +11,6 @@
     return array;
 }
 
-int[,] ModifyMatrix(int[,] arr)
-{
-    for (int row = 1; row < arr.GetLength(0); row += 2)
-    {
-        for (int column = 1; column < arr.GetLength(1); column +=2)
-        {
-            arr[row, column] = arr[row, column] * arr[row, column];
-        }
-    }
-    return arr;
-}
-
 void PrintMatrix(int[,] arr)
 {
     for (int row = 0; row < arr.GetLength(0); row++)
@@ -35,8 +23,23 @@ void PrintMatrix(int[,] arr)
     }
 }
 
-int[,] matrix1 = CreateMatrix(6, 6, 0, 9);
-PrintMatrix(matrix1);
+void PrintModifiedMatrix(int[,] arr)
+{
+    for (int row = 0; row < arr.GetLength(0); row++)
+    {
+        for (int column = 0; column < arr.GetLength(1); column++)
+        {
+            if (row % 2 == 1 && column % 2 == 1)
+            {
+                Console.Write($"*{arr[row, column] * arr[row, column]}\t");
+            }
+            else Console.Write($"{arr[row, column]}\t");
+        }
+        Console.WriteLine();
+    }
+}
+
+int[,] matrix = CreateMatrix(7, 7, 0, 10);
+PrintMatrix(matrix);
 Console.WriteLine();
-int[,] matrix2 = ModifyMatrix(matrix1);
-PrintMatrix(matrix2);
+PrintModifiedMatrix(matrix);
