@@ -25,9 +25,7 @@ void PrintMatrix(int[,] arr)
 
 void PrintDiagonalSum(int[,] arr)
 {
-    int min;
-    if (arr.GetLength(0) <= arr.GetLength(1)) min = arr.GetLength(0);
-    else min = arr.GetLength(1);
+    int min = Math.Min(arr.GetLength(0), arr.GetLength(1));
 
     int sumNum = 0;
     string sumStr = string.Empty;
