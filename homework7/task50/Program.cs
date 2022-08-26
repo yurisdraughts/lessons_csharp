@@ -38,9 +38,10 @@ int? FindElement(int row, int column, int[,] arr)
 //Задаём метод, выводящий на консоль элемент по его координатам, либо указывающий, что такого элемента нет
 void PrintElement(int row, int column, int[,] arr)
 {
-    if (FindElement(row, column, arr) != null)
+    int? element = FindElement(row, column, arr);
+    if (element != null)
     {
-        Console.WriteLine($"[{row}, {column}] -> {FindElement(row, column, arr)}");
+        Console.WriteLine($"[{row}, {column}] -> {element}");
     }
     else
     {
