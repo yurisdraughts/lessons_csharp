@@ -1,5 +1,6 @@
 ﻿//Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
 
+//Задаём метод для создания двумерного массива из случайных вещественных чисел
 double[,] CreateMatrix(int rowCount, int columnCount, double min, double max)
 {
     double[,] array = new double[rowCount, columnCount];
@@ -14,6 +15,7 @@ double[,] CreateMatrix(int rowCount, int columnCount, double min, double max)
     return array;
 }
 
+//Задаём метод для вывода двумерного массива на консоль
 void PrintMatrix(double[,] arr)
 {
     for (int row = 0; row < arr.GetLength(0); row++)
@@ -26,10 +28,12 @@ void PrintMatrix(double[,] arr)
     }
 }
 
-void Main(int rowCount, int columnCount, double min, double max)
+//Задаём основной метод, в котором вызываем методы для создания массива и вывода на консоль
+void Main(int m, int n, double min, double max)
 {
-    double[,] matrix = CreateMatrix(rowCount, columnCount, min, max);
+    double[,] matrix = CreateMatrix(m, n, min, max);
     PrintMatrix(matrix);
 }
 
+//Вызываем основной метод
 Main(3, 4, -9, 9);
