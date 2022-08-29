@@ -65,30 +65,19 @@ void PrintFrequencies(int[] arr)
     int count = 1;
     for (int i = 1; i < arr.Length; i++)
     {
-        if (i != arr.Length - 1)
+        if (arr[i] == arr[i - 1])
         {
-            if (arr[i] == arr[i - 1])
-            {
-                count++;
-            }
-            else
-            {
-                Console.WriteLine($"{arr[i - 1]} встречается {count} раз");
-                count = 1;
-            }
+            count++;
         }
         else
         {
-            if (arr[i] == arr[i - 1])
-            {
-                count++;
-                Console.WriteLine($"{arr[i]} встречается {count} раз");
-            }
-            else
-            {
-                Console.WriteLine($"{arr[i - 1]} встречается {count} раз");
-                Console.WriteLine($"{arr[i]} встречается 1 раз");
-            }
+            Console.WriteLine($"{arr[i - 1]} встречается {count} раз");
+            count = 1;
+        }
+
+        if (i == arr.Length - 1)
+        {
+            Console.WriteLine($"{arr[i]} встречается {count} раз");
         }
     }
 }
