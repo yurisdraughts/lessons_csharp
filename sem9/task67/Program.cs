@@ -7,7 +7,7 @@
 int DigitSum2(int number)
 {
     if (number == 0) return 0;
-    return (number % 10) + SumDigits2(number / 10);
+    return (number % 10) + DigitSum2(number / 10);
 }
 
 Console.Write("Введите натуральное число: ");
